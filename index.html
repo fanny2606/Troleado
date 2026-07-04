@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><title>Troleado</title>
+<style>
+body{background:#000;color:#0f0;font-family:monospace;text-align:center;margin:0}
+#wrap{margin-top:80px}#bar{width:70%;height:30px;border:2px solid #0f0;margin:20px auto}
+#fill{height:100%;width:0;background:#0f0}#final{display:none;color:#fff}
+h1{color:red;font-size:60px}
+</style></head><body>
+<div id="wrap">
+<h2>⚠ ACCESO NO AUTORIZADO ⚠</h2>
+<p id="msg">Conectando...</p>
+<div id="bar"><div id="fill"></div></div>
+</div>
+<div id="final">
+<h1>🤡 TROLEADO, PUTO 🤡</h1>
+<p>JAJAJAJA ERA JODA 😂</p>
+</div>
+<script>
+let p=0,m=["Accediendo a WhatsApp...","Copiando conversaciones...","Descargando galería...","Obteniendo ubicación...","Enviando datos..."];
+let fill=document.getElementById("fill"),msg=document.getElementById("msg");
+let i=setInterval(()=>{
+p+=2;fill.style.width=p+"%";
+if(p==20)msg.textContent=m[0];
+if(p==40)msg.textContent=m[1];
+if(p==60)msg.textContent=m[2];
+if(p==80)msg.textContent=m[3];
+if(p>=95)msg.textContent=m[4];
+if(p>=100){clearInterval(i);document.getElementById("wrap").style.display="none";document.getElementById("final").style.display="block";}
+},90);
+</script></body></html>
